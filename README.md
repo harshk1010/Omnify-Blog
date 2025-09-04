@@ -33,7 +33,7 @@ Built with **React (frontend)** and **Spring Boot (backend)**, deployed on a clo
 
 - **Frontend**: React.js, React Router, Axios, Tailwind/MUI  
 - **Backend**: Spring Boot (REST APIs), Spring Security (JWT)  
-- **Database**: MySQL 
+- **Database**: MySQL  
 - **Authentication**: JWT  
 - **Deployment**: AWS / GCP / Azure  
 
@@ -54,73 +54,55 @@ Built with **React (frontend)** and **Spring Boot (backend)**, deployed on a clo
 - JDK 11+  
 - Maven  
 - npm  
-- MySQL 
+- MySQL  
+
+---
 
 ### Backend Setup
 
 1. Clone the repository:
-
 ```bash
-git clone https://github.com/your_username/food-website.git
-cd food-website
+git clone https://github.com/your_username/Omnify-Blog.git
+cd Omnify-Blog
 ```
-  
-  2. Navigate to the backend directory and build the Spring Boot application:
+
+2. Navigate to the backend directory and build the Spring Boot application:
 ```bash
-  cd backend
-  ./mvnw clean install
+cd backend
+./mvnw clean install
 ```
-  
-  3. Start the backend server:
-  ```bash   
-  ./mvnw spring-boot:run
-  ```
 
-## Database Configuration
+3. Start the backend server:
+```bash
+./mvnw spring-boot:run
+```
 
-Update the `application.properties` file in the backend:
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/food_app
+## Update the application.properties file in the backend:
+```bash
+spring.datasource.url=jdbc:mysql://localhost:3306/omnify_blog
 spring.datasource.username=your_mysql_username
 spring.datasource.password=your_mysql_password
+spring.jpa.hibernate.ddl-auto=update
 ```
-
-
-## Usage
-- Use an API testing tool like Postman to interact with the backend services.
-- Register a new user account or log in with existing credentials via the API.
-- Use API endpoints to manage accounts, perform transactions, and view transaction history.
-
-
 
 ### Frontend Setup
 
+1. Navigate to the frontend directory:
+```bash
 cd Omnify-Blog/frontend/Omnify
+```
 
-
+2. Create a .env file in the frontend root:
+```bash
 REACT_APP_API_BASE_URL=http://localhost:8080/api
+```
 
+3. Install dependencies:
+```bash
 npm install
+```
 
-API Endpoints
-Authentication
-
-POST /api/auth/signup → Register a new user
-
-POST /api/auth/login → Authenticate and get JWT
-
-Blogs
-
-GET /api/blogs → Get all blogs (with pagination)
-
-GET /api/blogs/{id} → Get blog details
-
-POST /api/blogs → Create a new blog (requires JWT)
-
-PUT /api/blogs/{id} → Update a blog (author only)
-
-DELETE /api/blogs/{id} → Delete a blog (author only)
-
-
-
+4. Start the React development server:
+```bash
+npm start
+```
