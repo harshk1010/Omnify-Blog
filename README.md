@@ -57,28 +57,43 @@ Built with **React (frontend)** and **Spring Boot (backend)**, deployed on a clo
 - MySQL 
 
 ### Backend Setup
+
+1. Clone the repository:
+
 ```bash
-git clone https://github.com/harshk1010/Omnify-Blog.git
-cd Omnify-Blog/backend
+git clone https://github.com/your_username/food-website.git
+cd food-website
+```
+  
+  2. Navigate to the backend directory and build the Spring Boot application:
+```bash
+  cd backend
+  ./mvnw clean install
+```
+  
+  3. Start the backend server:
+  ```bash   
+  ./mvnw spring-boot:run
+  ```
 
-CREATE DATABASE omnify_blog;
+## Database Configuration
 
+Update the `application.properties` file in the backend:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/omnify_blog
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/food_app
 spring.datasource.username=your_mysql_username
 spring.datasource.password=your_mysql_password
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-
-jwt.secret=your_secret_key
-
-
-./mvnw clean install
-./mvnw spring-boot:run
-
-
 ```
+
+
+## Usage
+- Use an API testing tool like Postman to interact with the backend services.
+- Register a new user account or log in with existing credentials via the API.
+- Use API endpoints to manage accounts, perform transactions, and view transaction history.
+
+
+
 ### Frontend Setup
 
 cd Omnify-Blog/frontend/Omnify
@@ -88,7 +103,7 @@ REACT_APP_API_BASE_URL=http://localhost:8080/api
 
 npm install
 
-PI Endpoints
+API Endpoints
 Authentication
 
 POST /api/auth/signup → Register a new user
