@@ -33,7 +33,7 @@ Built with **React (frontend)** and **Spring Boot (backend)**, deployed on a clo
 
 - **Frontend**: React.js, React Router, Axios, Tailwind/MUI  
 - **Backend**: Spring Boot (REST APIs), Spring Security (JWT)  
-- **Database**: MySQL / PostgreSQL (via JPA/Hibernate)  
+- **Database**: MySQL 
 - **Authentication**: JWT  
 - **Deployment**: AWS / GCP / Azure  
 
@@ -53,8 +53,8 @@ Built with **React (frontend)** and **Spring Boot (backend)**, deployed on a clo
 ### Prerequisites
 - JDK 11+  
 - Maven  
-- Node.js & npm  
-- MySQL/PostgreSQL  
+- npm  
+- MySQL 
 
 ### Backend Setup
 ```bash
