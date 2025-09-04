@@ -22,3 +22,62 @@ Built with **React (frontend)** and **Spring Boot (backend)**, deployed on the c
 
 ## 📂 Project Structure
 
+Omnify-Blog/
+│
+├── backend/                     # Spring Boot backend (REST API + Auth + DB)
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/omnify/blog/   # Java source code
+│   │   │   │   ├── controller/         # REST controllers
+│   │   │   │   ├── model/              # Entities
+│   │   │   │   ├── repository/         # Repositories
+│   │   │   │   └── service/            # Services
+│   │   │   └── resources/
+│   │   │       └── application.properties
+│   ├── pom.xml                 # Maven config
+│   └── README.md
+│
+├── frontend/Omnify/            # React frontend
+│   ├── src/
+│   │   ├── components/         # Reusable UI components
+│   │   ├── pages/              # Signup, Login, BlogList, BlogDetail, CreateBlog
+│   │   ├── services/           # API calls (Axios)
+│   │   └── App.js              # Main app entry
+│   ├── public/
+│   ├── package.json            # Node.js dependencies
+│   └── README.md
+│
+├── .gitignore
+├── README.md                   # Main project instructions (this file)
+└── LICENSE (if any)
+
+
+
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React** (with React Router, Axios, etc.)
+- **Tailwind CSS / Material UI** (if used)
+- Responsive UI
+
+### Backend
+- **Spring Boot**
+- **Spring Security + JWT** for authentication
+- **JPA / Hibernate** with SQL database (e.g., PostgreSQL/MySQL)
+
+### Deployment
+- **Cloud Platform**: [AWS / GCP / Azure]  
+- **Database**: Cloud-hosted SQL/NoSQL instance
+
+---
+
+## 🔑 Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/harshk1010/Omnify-Blog.git
+cd Omnify-Blog
+
