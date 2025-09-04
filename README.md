@@ -60,5 +60,52 @@ Built with **React (frontend)** and **Spring Boot (backend)**, deployed on a clo
 ```bash
 git clone https://github.com/harshk1010/Omnify-Blog.git
 cd Omnify-Blog/backend
+
+CREATE DATABASE omnify_blog;
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/omnify_blog
+spring.datasource.username=your_mysql_username
+spring.datasource.password=your_mysql_password
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+jwt.secret=your_secret_key
+
+
 ./mvnw clean install
 ./mvnw spring-boot:run
+
+
+```
+### Frontend Setup
+
+cd Omnify-Blog/frontend/Omnify
+
+
+REACT_APP_API_BASE_URL=http://localhost:8080/api
+
+npm install
+
+PI Endpoints
+Authentication
+
+POST /api/auth/signup → Register a new user
+
+POST /api/auth/login → Authenticate and get JWT
+
+Blogs
+
+GET /api/blogs → Get all blogs (with pagination)
+
+GET /api/blogs/{id} → Get blog details
+
+POST /api/blogs → Create a new blog (requires JWT)
+
+PUT /api/blogs/{id} → Update a blog (author only)
+
+DELETE /api/blogs/{id} → Delete a blog (author only)
+
+
+
